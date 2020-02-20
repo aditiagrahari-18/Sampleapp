@@ -12,7 +12,7 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
 	assert_select "a[href=?]", 'about'
 	assert_select "a[href=?]", 'contact'
   get '/signup'
-  assert_template '/signup'
+  assert_template 'users/new'
   assert_select "a[href=?]", 'signup'
 	end
 end
