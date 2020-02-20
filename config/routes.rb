@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-<<<<<<< HEAD
+
+  get '/signup', to: 'users#new'
   get 'product/page'
   get 'product/price'
   get 'static_pages/home'
@@ -8,6 +9,6 @@ Rails.application.routes.draw do
   get 'static_pages/contact'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root 'application#sampleapp'
-=======
+
 
 end
