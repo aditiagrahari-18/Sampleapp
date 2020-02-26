@@ -1,39 +1,37 @@
 <h1>Estimate Price</h1>
 
 <label>Total Amount</label><br>
-<%= @totalamt %><br><br>
+<%= number_to_currency(@totalamt,unit:"₹") %><br><br>
 
 <label>Previous price of first product ::</label>
-<%= @product1 %>
+<%= number_to_currency @product1,unit:"₹" %>
 <label>New Price ::</label>
-<%= @netamt1 %><br><br>
+<%= number_to_currency @netamt1, unit:"₹"  %><br><br>
 
 <label>Previous price of second product ::</label>
-<%= @product2 %>
+<%= number_to_currency @product2, unit:"₹" %>
 <label>New Price ::</label>
-<%= @netamt2 %><br><br>
+<%= number_to_currency @netamt2, unit:"₹" %><br><br>
 
 <label>Previous price of third product ::</label>
-<%= @product3 %>
+<%= number_to_currency@product3, unit:"₹" %>
 <label>New Price ::</label>
-<%= @netamt3 %><br><br>
+<%= number_to_currency @netamt1, unit:"₹"%><br><br>
 
 <label>Previous price of fourth product ::</label>
-<%= @product4 %>
+<%= number_to_currency @product4, unit:"₹" %>
 <label>New Price ::</label>
-<%= @netamt4 %><br>
+<%= number_to_currency @netamt4, unit:"₹" %><br>
 
 <!-- <html>
    <body>
       <form method = "POST" action = "http://www.example.com/test.cgi">
          First Name :<input type = "text" name = "FirstName" value = "" />
          <br />number_to_currency
-         Last Name :<input type = "text" name = "LastName" value = "" /> 
+         Last Name :<input type = "text" name = "LastName" value = "" />
          <input type = "submit" value = "Submit Data" />
       </form>
    </body>
 </html>
 
  -->
-
- 

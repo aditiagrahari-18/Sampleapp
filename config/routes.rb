@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
+  get 'product/page'
+  # get 'product/price'
+  get 'product/create'
+  post 'product/create'
 
   get '/signup', to: 'users#new'
-  get 'product/page'
-  get 'product/price'
+  post '/signup', to:'users#create'
   get 'static_pages/home'
   get 'static_pages/help', to: 'static_pages#help'
   get 'static_pages/about'

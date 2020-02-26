@@ -1,31 +1,60 @@
 <h1>Products</h1>
 
+<%= @error %>
 
-      <form action = "/product/price" >
+<%= form_tag "/product/create" do %>
+  <%= label_tag(:product1, "Product1:") %>
+  <%= text_field_tag :product1, @product1, required: false, min:1, type: "number" %>
+   <br>
+   <br>
+  <%= label_tag(:product2, "Product2:") %>
+  <%= text_field_tag :product2, @product2, required: true, type: "number", min:1 %>
+  <br>
+  <br>
+  <%= label_tag(:product3, "Product3:") %>
+  <%= text_field_tag :product3, @product3, required: true, type: "number", min:1 %>
+  <br>
+  <br>
+  <%= label_tag(:product4, "Product4:") %>
+  <%= text_field_tag :product4, @product4, required: true, type: "number", min:1 %>
+  <br>
+  <br>
+  <%= label_tag(:tax, "Total Tax:") %>
+  <%= text_field_tag :tax, @total_tax, required: true, type: "number",min:1%>
+  <br>
+  <br>
+  <%= label_tag(:discount, "Discount:") %>
+  <%= text_field_tag :discount, @total_discount, required: true, type: "number",min:1 %>
+  <br>
+  <br>
+  <%= submit_tag("Submit") %>
+<% end %>
+
+
+      <!-- <form action = "/product/price" >
        Product 1
        <br>
-       <input type="" name="text1">
+       <input type="number" name="number1" value="0">
        <br>
         Product 2
        <br>
-       <input type="text" name="text2">
+       <input type="number" name="number2" value="0">
        <br>
         Product 3
        <br>
-       <input type="text" name="text3">
+       <input type="number" name="number3" value="0">
        <br>
         Product 4
        <br>
-       <input type="text" name="text4">
+       <input type="number" name="number4" value="0">
        <br>
         Total Tax
        <br>
-       <input type="text" name="text5">
+       <input type="number" name="number5" value="0">
        <br>
        Discount
        <br>
-       <input type="text" name="text6">
+       <input type="number" name="number6" value="0">
        <br><br>
        <input type="submit"/>
-     </form>
- 
+     </form> -->
