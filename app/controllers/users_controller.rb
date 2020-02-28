@@ -1,30 +1,30 @@
 class UsersController < ApplicationController
   def show
-  #    @user = User.find(params[:id])
+     @user = User.find(params[:id])
+    #debugger
   end
   def new
     @user = User.new
   end
 
   def create
-  @user = User.new(user_params)
-
-  respond_to do |format|
+    @user = User.new(user_params)
     if @user.save
-      format.html { redirect_to @user, notice: 'User was successfully created.' }
-      format.json { render :show, status: :created, location: @user }
+     flash[:success] = "Welcome to the Sample App!"
+     # redirect_to login_path
+     redirect_to @user
     else
-      format.html { render :new }
-      # format.json { render json: @user.errors, status: :unprocessable_entity }
-      render html: "Signup Unsuccess please try again"
+      render 'new'
     end
-
+  end
+  def login
+    @user = User.last(params[:id])
+  end
   private
 
   def user_params
-    params.require(:user).permit(:username, :email)
+  params.require(:user).permit(:name, :email, :password, :password_confirmation)
   end
 
-  end
-  end
 end
+ # puts params.to_yaml

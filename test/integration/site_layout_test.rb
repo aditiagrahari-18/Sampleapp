@@ -5,7 +5,7 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
   #   assert true
   # end
   test "layout links" do
-	get '/static_pages/home'
+	get static_pages_home_path
 	assert_template 'static_pages/home'
 	assert_select "a[href=?]", 'home', count: 2
 	assert_select "a[href=?]", 'help'
