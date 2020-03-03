@@ -10,15 +10,12 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-     flash[:success] = "Welcome to the Sample App!"
-     # redirect_to login_path
-     redirect_to @user
+      log_in @user
+      flash[:success] = "Welcome to the Sample App!"
+      redirect_to @user
     else
       render 'new'
     end
-  end
-  def login
-    @user = User.last(params[:id])
   end
   private
 

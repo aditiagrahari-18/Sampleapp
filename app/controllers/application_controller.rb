@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  include SessionsHelper
     def sampleapp
         render html: "hello, world!Today I am developing sample app."
     end

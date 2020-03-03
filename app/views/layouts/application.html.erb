@@ -3,6 +3,7 @@
   <head>
     <title><%= full_title(yield(:title)) %></title>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
@@ -12,8 +13,10 @@
   <%= render 'layouts/header' %>
   <div class="container">
     <% flash.each do |key, value| %>
-    <%= content_tag(:div, value, class: "alert alert-#{key}")%>
-    <div class="alert alert-<%= key %>"><%= value %></div>
+      <%= content_tag(:div, value, class: "alert alert-#{key}") %>
+      <% if false %>
+        <div class="alert alert-<%= key %>"><%= value %></div>
+      <% end %>
     <% end %>
     <%= yield %>
     <%= render 'layouts/footer' %>

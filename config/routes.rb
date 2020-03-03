@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
+  get '/login', to: 'sessions#new'
   get 'product/page'
   # get 'product/price'
   get 'product/create'
   post 'product/create'
   get '/signup', to: 'users#new'
-  get  'login', to: 'users#login'
+  # get  'login', to: 'users#login'
+  post '/login',  to: 'sessions#create'
+  delete '/logout',to: 'sessions#destroy'
   resources :users
   # post '/signup', to:'users#create'
   get 'static_pages/home'
