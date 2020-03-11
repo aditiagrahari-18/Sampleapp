@@ -2,14 +2,15 @@ class StaticPagesController < ApplicationController
   # layout "main", except: [:home, :about]
   # layout "main", only: [:home, :about]
   def home
+    
   end
 
   def help
   end
-  def about                                           
-    
+  def about
+
   end
-  def contact                                           
-    
+  def contact
+
   end
 end
