@@ -70,16 +70,18 @@ Rails.application.configure do
   host = 'blooming-bayou-56654.herokuapp.com'
   config.action_mailer.default_url_options = { host: host }
   ActionMailer::Base.smtp_settings = {
-  address: 'smtp.sendgrid.net',
-  port: '587',
-  authentication: plain:,
-  user_name: "aditi@akaruilabs",
-  password:  "aditi@1805"
-  domain:'heroku.com',
-  enable_starttls_auto: true
-  }
+    address: "smtp.sendgrid.net",
+    port: 587,
+    authentication: "plain",
+    user_name: "aditi@akaruilabs",
+    password:  "aditi@1805",
+    domain: 'heroku.com',
+    enable_starttls_auto: true
+    }
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
+
+
   config.i18n.fallbacks = true
 
   # Send deprecation notices to registered listeners.
