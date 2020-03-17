@@ -37,13 +37,13 @@ Rails.application.configure do
   host = 'localhost:3000'
   config.action_mailer.default_url_options = { host: host, protocol: 'http' }
   config.action_mailer.perform_caching = false
-  config.action_mailer.perform_deliveries = false
-  config.action_mailer.delivery_method = :test
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.delivery_method = :smtp
   ActionMailer::Base.smtp_settings = {
     address: 'smtp.sendgrid.net',
     port: '587',
-    user_name: "aditi@akaruilabs",
-    password: "aditi@1805"
+    user_name: ENV['SENDGRID_USERNAME'],
+    password:  ENV['SENDGRID_PASSWORD'],
   }
 
   # Print deprecation notices to the Rails logger.

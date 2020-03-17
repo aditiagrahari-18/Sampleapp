@@ -9,9 +9,19 @@
     </section>
   </aside>
 </div>
-<h3>User Profile Page</h3>
+<div class="col-md-8">
+  <% if @user.microposts.any? %>
+    <h3>Microposts (<%= @user.microposts.count %>)</h3>
+    <ol class="microposts">
+      <%= render @microposts %>
+    </ol>
+      <%= will_paginate @microposts %>
+    <% end %>
+  </div>
+</div>
+<!-- <h3>User Profile Page</h3>
 <p>Name:    <%= @user.name%>       </p>
 <p>Email:   <%= @user.email %>     </p>
 <p>Created: <%= @user.created_at %></p>
 <p>Updated: <%= @user.updated_at %></p>
-<p>Time:    <%= Time.now %>        </p>
+<p>Time:    <%= Time.now %>        </p> -->

@@ -8,4 +8,5 @@ module ApplicationHelper
       page_title + " | " + base_title #variable interpolation
     end
   end
+
 end
