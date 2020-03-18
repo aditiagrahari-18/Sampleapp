@@ -80,7 +80,8 @@ Rails.application.configure do
     }
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
-
+  # Store uploaded files on Amazon AWS.
+  config.active_storage.service = :amazon
 
   config.i18n.fallbacks = true
 
